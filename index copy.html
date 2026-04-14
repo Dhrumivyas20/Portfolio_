@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhrumi Vyas — Portfolio</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <canvas id="bg-canvas"></canvas>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+    <div class="hero-orb"></div>
+    <div class="hero-orb2"></div>
+
+    <!-- NAV -->
+    <nav>
+        <div class="nav-logo">DV</div>
+        <div class="hamburger" id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#work">Experience</a></li>
+            <li><a href="#volunteering">Volunteering</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <div id="home">
+        <div class="hero-content">
+            <div class="hero-tag">Available for opportunities</div>
+            <h2 class="hero-subtitle">Hey There,</h2>
+            <h1 class="hero-name">Dhrumi<span> Vyas</span></h1>
+            <p class="hero-title">// Machine Learning Engineer · Data Analyst</p>
+            <p class="hero-desc">Working on designing intelligent software with Python, TensorFlow, OpenCV, and deep
+                learning. I build solutions, not just models.</p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-outline">Get in Touch</a>
+                <a href="src/Resume(IIT).pdf" class="btn btn-outline" download>Resume</a>
+            </div>
+            <div class="hero-socials">
+                <a href="https://linkedin.com/in/dhrumi-vyas/" target="_blank" class="social-icon" title="LinkedIn">
+                    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+                        <circle cx="4" cy="4" r="2" />
+                    </svg>
+                </a>
+                <a href="https://github.com/Dhrumivyas20" target="_blank" class="social-icon" title="GitHub">
+                    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                    </svg>
+                </a>
+                <a href="mailto:dhrumivyas20705@gmail.com" class="social-icon" title="Email">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <rect x="2" y="4" width="20" height="16" rx="2" />
+                        <path d="M2 7l10 7 10-7" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="scroll-hint">
+                <div class="scroll-line"></div>
+                scroll
+            </div>
+
+        </div>
+
+        <div class="hero-photo-wrap">
+            <div class="hero-photo-glow"></div>
+            <img src="src/photo.jpeg" alt="Dhrumi Vyas" class="hero-photo" />
+            <div class="hero-photo-dots"></div>
+        </div>
+
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="reveal">
+            <p class="section-label">About</p>
+            <h2 class="section-title">Who I Am</h2>
+        </div>
+        <div class="about-grid reveal">
+            <div class="about-text">
+                <p>I'm Dhrumi Vyas, a passionate technologist pursuing dual degrees — B.Tech in Computer Science from JG
+                    University, Ahmedabad and BS in Data Science from the Indian Institute of Technology, Madras.
+                </p>
+                <p>My work sits at the intersection of machine learning, data science, and full-stack development. I
+                    enjoy building end-to-end systems — from training predictive models to deploying them as intuitive
+                    web applications.
+                </p>
+                <p>Beyond code, I lead the Tech Club at JG University as Technical Head, mentor junior developers, and
+                    actively volunteer in sports coordination at IIT Madras. I believe in building tech that solves real
+                    problems for real people.</p>
+            </div>
+            <div class="about-stats">
+                <div class="stat-card">
+                    <div class="stat-num">8.45</div>
+                    <div class="stat-label">CGPA — IIT Madras</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num">8.1</div>
+                    <div class="stat-label">SGPA — JG University</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num">4+</div>
+                    <div class="stat-label">Projects Built</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num">15+</div>
+                    <div class="stat-label">Team Members Led</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- EDUCATION (DONE)-->
+    <section id="education">
+        <p class="section-label">Academic Background</p>
+        <h2 class="section-title">Education</h2>
+
+        <div class="edu-stack reveal">
+            <div class="edu-card">
+                <div class="edu-img-wrap">
+                    <img src="https://jguni.in/images/campus/3.jpg" alt="JG University" />
+                </div>
+
+                <!-- RIGHT: Info -->
+                <div class="edu-body">
+                    <span class="edu-type-badge">B.Tech</span>
+                    <div class="edu-inst">Bachelor Of Technology In Computer Science</div>
+                    <div class="edu-degree">JG University</div>
+                    <div class="edu-divider"></div>
+                    <div class="edu-meta">
+                        <div class="edu-meta-item edu-year">
+                            <span class="edu-meta-dot"></span>
+                            2024 – 2028
+                        </div>
+                        <div class="edu-meta-item edu-cgpa">
+                            <span class="edu-meta-dot"></span>
+                            CGPA: 8.0 / 10
+                        </div>
+                        <span class="edu-status pursuing">Pursuing</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="edu-card">
+                <div class="edu-img-wrap">
+                    <img src="https://zdpdvwhvukelzzbzbjvh.supabase.co/storage/v1/object/public/imported-images/1769242901801-cad3ffe1-7004-4d7f-b23a-60fdbe8b6cae-w8hpnn.webp"
+                        alt="JG University" />
+                </div>
+
+                <div class="edu-body">
+                    <span class="edu-type-badge">B.S</span>
+                    <div class="edu-inst">Bachelor of Science in Data Science</div>
+                    <div class="edu-degree">Indian Institute Of Technology, Madras &nbsp;|&nbsp; IITM</div>
+                    <div class="edu-divider"></div>
+                    <div class="edu-meta">
+                        <div class="edu-meta-item edu-year">
+                            <span class="edu-meta-dot"></span>
+                            2024 – 2028
+                        </div>
+                        <div class="edu-meta-item edu-cgpa">
+                            <span class="edu-meta-dot"></span>
+                            CGPA: 8.45 / 10
+                        </div>
+                        <span class="edu-status pursuing">Pursuing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <div class="reveal">
+            <p class="section-label">Projects</p>
+            <h2 class="section-title">What I've Built</h2>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card reveal">
+                <div class="project-num">Project 01</div>
+                <div class="project-title">Stock Price Prediction</div>
+                <div class="project-desc">Time-series LSTM model that forecasts future closing price trends using 5+
+                    years of
+                    historical data and multiple technical indicators, covering data collection, feature engineering,
+                    model
+                    training, and visualization.</div>
+                <div class="project-tags">
+                    <span class="project-tag">LSTM</span>
+                    <span class="project-tag">TensorFlow</span>
+                    <span class="project-tag">Pandas</span>
+                    <span class="project-tag">NumPy</span>
+                    <span class="project-tag">Plotly</span>
+                    <span class="project-tag">yfinance</span>
+                </div>
+            </div>
+            <div class="project-card reveal">
+                <div class="project-num">Project 02</div>
+                <div class="project-title">Medicine Recommendation System</div>
+                <div class="project-desc">Disease prediction and personalized health recommendations using an SVM-based
+                    model,
+                    deployed through an interactive Flask web application with a focus on usability and responsible
+                    handling of
+                    health data.</div>
+                <div class="project-tags">
+                    <span class="project-tag">SVM</span>
+                    <span class="project-tag">Flask</span>
+                    <span class="project-tag">Python</span>
+                    <span class="project-tag">scikit-learn</span>
+                    <span class="project-tag">Pandas</span>
+                </div>
+            </div>
+            <div class="project-card reveal">
+                <div class="project-num">Project 03</div>
+                <div class="project-title">Healthcare Chatbot</div>
+                <div class="project-desc">AI-powered healthcare chatbot providing real-time responses to health queries,
+                    symptom
+                    guidance, and disease awareness. NLP-enhanced interaction for underserved communities with a
+                    user-friendly
+                    interface.</div>
+                <div class="project-tags">
+                    <span class="project-tag">NLP</span>
+                    <span class="project-tag">Machine Learning</span>
+                    <span class="project-tag">Python</span>
+                    <span class="project-tag">Web</span>
+                </div>
+            </div>
+            <div class="project-card reveal">
+                <div class="project-num">Project 04</div>
+                <div class="project-title">Bone Fracture Detection <span
+                        style="font-size:0.65rem;color:var(--accent);margin-left:0.5rem;"><br>Ongoing</span></div>
+                <div class="project-desc">An intelligent diagnostic tool that leverages deep learning to automatically
+                    detect and classify bone fractures from X-ray images, reducing manual diagnosis time and improving
+                    accuracy.</div>
+                <div class="project-tags">
+                    <span class="project-tag">TensorFlow</span>
+                    <span class="project-tag">Keras</span>
+                    <span class="project-tag">OpenCV</span>
+                    <span class="project-tag">Grad-CAM</span>
+                    <span class="project-tag">CNN</span>
+                    <span class="project-tag">Scikit-learn</span>
+                    <span class="project-tag">Matplotlib</span>
+                    <span class="project-tag">Flask</span>
+                </div>
+            </div>
+            <div class="project-card reveal">
+                <div class="project-num">Project 05</div>
+                <div class="project-title">CareerSprint (Placement Preparation Portal) <span
+                        style="font-size:0.65rem;color:var(--accent);margin-left:0.5rem;"><br>Ongoing</span></div>
+                <div class="project-desc">A full-stack web platform that helps students prepare for campus placements
+                    with personalized & company-specific roadmaps, curated question banks, and role-based learning
+                    paths.</div>
+                <div class="project-tags">
+                    <span class="project-tag">MongoDB</span>
+                    <span class="project-tag">Express</span>
+                    <span class="project-tag">React</span>
+                    <span class="project-tag">Node.js</span>
+                    <span class="project-tag">JWT Auth</span>
+                    <span class="project-tag">REST API</span>
+                </div>
+            </div>
+            <div class="project-card reveal">
+                <div class="project-num">Project 06</div>
+                <div class="project-title">Algorithm Visualization Tool <span
+                        style="font-size:0.65rem;color:var(--accent);margin-left:0.5rem;"><br>Ongoing</span></div>
+                <div class="project-desc">Interactive algorithm visualization platform with step-by-step visualization
+                    of Bubble
+                    Sort, Selection Sort, and Linear Search. Extending to include additional algorithms, improved
+                    accuracy, and
+                    performance insights.</div>
+                <div class="project-tags">
+                    <span class="project-tag">Flask</span>
+                    <span class="project-tag">DSA</span>
+                    <span class="project-tag">Python</span>
+                    <span class="project-tag">JavaScript</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- SKILLS -->
+    <div id="skills">
+        <div class="inner">
+            <div class="reveal">
+                <p class="section-label">Skills</p>
+                <h2 class="section-title">Technical Stack</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-group reveal">
+                    <div class="skill-group-title">Programming Languages</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">Java</span>
+                    </div>
+                </div>
+                <div class="skill-group reveal">
+                    <div class="skill-group-title">Machine Learning</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">scikit-learn</span>
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Matplotlib</span>
+                        <span class="skill-tag">Seaborn</span>
+                    </div>
+                </div>
+                <div class="skill-group reveal">
+                    <div class="skill-group-title">Web Development</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express.js</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">REST API</span>
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                    </div>
+                </div>
+                <div class="skill-group reveal">
+                    <div class="skill-group-title">Databases</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">SQLite</span>
+                    </div>
+                </div>
+                <div class="skill-group reveal">
+                    <div class="skill-group-title">Concepts</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Data Structure & Algorithms</span>
+                        <span class="skill-tag">Object Oriented Programming</span>
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">Deep Learning</span>
+                        <span class="skill-tag">Software Engineering</span>
+                    </div>
+                </div>
+                <div class="skill-group reveal">
+                    <div class="skill-group-title">Tools</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git/GitHub</span>
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Cisco Packet Tracer</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Postman</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!--(DONE) WORK / EXPERIENCE -->
+    <section id="work">
+        <div class="reveal">
+            <p class="section-label">Work/Internship</p>
+            <h2 class="section-title">Experience</h2>
+        </div>
+        <div class="timeline reveal">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Aug 2025 — Nov 2025</div>
+                <div class="timeline-role">Technical Content Curation Intern</div>
+                <div class="timeline-company">My Equation, GUSEC, A'bad, Gujarat</div>
+                <ul class="timeline-bullets">
+                    <li>Worked in a team of 5–10 members to curate and organize technical content for educational and
+                        research
+                        purposes.</li>
+                    <li>Produced articles, guides, and documentation ensuring clarity, accuracy, and accessibility.</li>
+                    <li>Collaborated with teammates to streamline content workflow, strengthen knowledge sharing, and
+                        improve
+                        overall project quality.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!--(DONE) VOLUNTEERING -->
+    <section id="volunteering">
+        <p class="section-label">Volunteering</p>
+        <h2 class="section-title">Leadership &amp; Responsibility</h2>
+
+        <div class="vol-grid reveal">
+            <div class="vol-card">
+                <div class="vol-img-wrap">
+                    <img src="src/tech.jpg" alt="Tech Club" />
+                </div>
+                <!--Technical Head-->
+                <div class="vol-body">
+                    <div class="vol-role">Technical Head</div>
+                    <div class="vol-org">Tech Club, JG University</div>
+                    <div class="vol-period">Nov 2024 — Present</div>
+                    <div class="vol-divider"></div>
+                    <ul class="vol-bullets">
+                        <li>Led a team of 50-60 members to organize technical workshops, hackathons, and coding
+                            competitions.</li>
+                        <li>Conducted sessions on Python, Web Development, AI/ML, and Git.</li>
+                        <li>Managed technical projects and mentored juniors in development and problem-solving.</li>
+                        <li>Coordinated with faculty and external speakers for technical events.</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Sports Coordinator -->
+            <div class="vol-card">
+                <div class="vol-img-wrap">
+                    <img src="src/sports.jpg" alt="Sports Department" />
+                </div>
+                <div class="vol-body">
+                    <div class="vol-role">Sports Volunteer</div>
+                    <div class="vol-org">Sports Department, IIT Madras</div>
+                    <div class="vol-period">April 2025 — Present</div>
+                    <div class="vol-divider"></div>
+                    <ul class="vol-bullets">
+                        <li>Led end-to-end execution of 10+ sports events at Paradox'25 with 500+ participants.</li>
+                        <li>Collaborated with event teams and cross-functional teams to enhance event visibility.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!--(DONE) CONTACT -->
+    <div id="contact">
+        <div class="inner">
+            <div class="reveal">
+                <p class="section-label">Contact</p>
+                <h2 class="section-title">Get in Touch</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-text reveal">
+                    <p>I'm currently open to internship opportunities, collaborations, and interesting projects. Whether
+                        you have a question, a project idea, or just want to say hello — my inbox is always open.</p>
+                    <br>
+                    <p>Feel free to reach out through any of the channels listed. I try to respond within 24 hours.</p>
+                    <br>
+                    <div style="margin-top:1.5rem;">
+                        <a href="Resume(IIT).pdf" class="btn btn-primary" download
+                            style="text-decoration:none;">Download Resume</a>
+                    </div>
+                </div>
+                <div class="contact-items reveal">
+                    <a href="mailto:dhrumivyas20705@gmail.com" class="contact-item">
+                        <div class="contact-me">
+                            <div class="contact-detail"><span class="contact-type"">Email :</span> dhrumivyas20705@gmail.com</div>
+                        </div>
+                    </a>
+                    <a href=" tel:+919558099245" class="contact-item">
+                                    <div>
+                                        <div class="contact-detail"><span class="contact-type"">Phone :</span> (+91) 9558099245</div>
+                        </div>
+                    </a>
+                    <a href=" https://linkedin.com/in/dhrumi-vyas/" target="_blank" class="contact-item">
+                                                <div>
+                                                    <div class="contact-detail"><span class="contact-type"">LinkedIn :</span> linkedin.com/in/dhrumi-vyas/</div>
+                        </div>
+                    </a>
+                    <a href=" https://github.com/Dhrumivyas20" target="_blank" class="contact-item">
+                                                            <div>
+                                                                <div class="contact-detail"><span class="contact-type"">GitHub :</span> github.com/Dhrumivyas20</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--(DONE) FOOTER -->
+    <footer>
+        <span>© 2026 Dhrumi Vyas. All rights reserved.</span>
+        <span style=" font-family:'DM Mono',monospace;">Built by Dhrumi Vyas</span>
+                                                                    </footer>
+
+    <script>
+        // Custom cursor & Tail
+        const cursor = document.getElementById('cursor');
+        const ring = document.getElementById('cursorRing');
+        
+        let mouseX = 0, mouseY = 0;
+        const tailCount = 8;
+        const tails = [];
+
+        for (let i = 0; i < tailCount; i++) {
+            const t = document.createElement('div');
+            t.className = 'cursor-tail';
+            // gradually shrink tail and fade
+            t.style.opacity = 1 - (i / tailCount);
+            t.style.transform = `translate(-50%, -50%) scale(${1 - (i / tailCount)})`;
+            document.body.appendChild(t);
+            tails.push({ el: t, x: 0, y: 0 });
+        }
+
+        document.addEventListener('mousemove', e => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            cursor.style.left = mouseX + 'px';
+            cursor.style.top = mouseY + 'px';
+            setTimeout(() => {
+                ring.style.left = mouseX + 'px';
+                ring.style.top = mouseY + 'px';
+            }, 60);
+        });
+
+        function animateTail() {
+            let px = mouseX;
+            let py = mouseY;
+            // Provide a small initial offset so they wait for mouse to move
+            for (let i = 0; i < tails.length; i++) {
+                const t = tails[i];
+                // Smooth follow factor
+                t.x += (px - t.x) * 0.35;
+                t.y += (py - t.y) * 0.35;
+                t.el.style.left = t.x + 'px';
+                t.el.style.top = t.y + 'px';
+                // the next segment follows this segment
+                px = t.x;
+                py = t.y;
+            }
+            requestAnimationFrame(animateTail);
+        }
+        animateTail();
+
+        document.querySelectorAll('a, button, .project-card, .stat-card, .edu-card, .vol-card, .skill-group').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.style.width = '20px'; cursor.style.height = '20px';
+                ring.style.width = '55px'; ring.style.height = '55px'; ring.style.opacity = '0.7';
+                tails.forEach(t => t.el.classList.add('hover'));
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.style.width = '10px'; cursor.style.height = '10px';
+                ring.style.width = '36px'; ring.style.height = '36px'; ring.style.opacity = '0.5';
+                tails.forEach(t => t.el.classList.remove('hover'));
+            });
+        });
+
+        // Scroll reveal
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Hamburger Menu
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-links');
+        const navItems = document.querySelectorAll('.nav-links a');
+
+        if (hamburger) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+        }
+
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="background.js"></script>
+</body>
+
+</html>

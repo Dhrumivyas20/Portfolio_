@@ -536,14 +536,9 @@ section {
         gap: 2rem;
     }
     .hero-photo-wrap {
-        width: 300px;
-        height: 350px;
+        width: 180px;
+        height: 180px;
         align-self: center;
-    }
-    .hero-photo-wrap::before,
-    .hero-photo-wrap::after,
-    .hero-photo {
-        border-radius: 24px;
     }
     .scroll-hint {
         position: static;
