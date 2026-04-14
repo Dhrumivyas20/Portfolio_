@@ -13,6 +13,7 @@
 
 <body>
 
+    <canvas id="bg-canvas"></canvas>
     <div class="cursor" id="cursor"></div>
     <div class="cursor-ring" id="cursorRing"></div>
     <div class="hero-orb"></div>
@@ -500,35 +501,76 @@
         <span style=" font-family:'DM Mono',monospace;">Built by Dhrumi Vyas</span>
                                                                     </footer>
 
-                                                                    <script>
-                                                                        // Custom cursor
-                                                                        const cursor = document.getElementById('cursor');
-                                                                        const ring = document.getElementById('cursorRing');
-                                                                        document.addEventListener('mousemove', e => {
-                                                                            cursor.style.left = e.clientX + 'px';
-                                                                            cursor.style.top = e.clientY + 'px';
-                                                                            setTimeout(() => {
-                                                                                ring.style.left = e.clientX + 'px';
-                                                                                ring.style.top = e.clientY + 'px';
-                                                                            }, 60);
-                                                                        });
-                                                                        document.querySelectorAll('a, button, .project-card, .stat-card, .edu-card, .vol-card, .skill-group').forEach(el => {
-                                                                            el.addEventListener('mouseenter', () => {
-                                                                                cursor.style.width = '20px'; cursor.style.height = '20px';
-                                                                                ring.style.width = '55px'; ring.style.height = '55px'; ring.style.opacity = '0.7';
-                                                                            });
-                                                                            el.addEventListener('mouseleave', () => {
-                                                                                cursor.style.width = '10px'; cursor.style.height = '10px';
-                                                                                ring.style.width = '36px'; ring.style.height = '36px'; ring.style.opacity = '0.5';
-                                                                            });
-                                                                        });
+    <script>
+        // Custom cursor & Tail
+        const cursor = document.getElementById('cursor');
+        const ring = document.getElementById('cursorRing');
+        
+        let mouseX = 0, mouseY = 0;
+        const tailCount = 8;
+        const tails = [];
 
-                                                                        // Scroll reveal
-                                                                        const observer = new IntersectionObserver(entries => {
-                                                                            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-                                                                        }, { threshold: 0.12 });
-                                                                        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-                                                                    </script>
+        for (let i = 0; i < tailCount; i++) {
+            const t = document.createElement('div');
+            t.className = 'cursor-tail';
+            // gradually shrink tail and fade
+            t.style.opacity = 1 - (i / tailCount);
+            t.style.transform = `translate(-50%, -50%) scale(${1 - (i / tailCount)})`;
+            document.body.appendChild(t);
+            tails.push({ el: t, x: 0, y: 0 });
+        }
+
+        document.addEventListener('mousemove', e => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            cursor.style.left = mouseX + 'px';
+            cursor.style.top = mouseY + 'px';
+            setTimeout(() => {
+                ring.style.left = mouseX + 'px';
+                ring.style.top = mouseY + 'px';
+            }, 60);
+        });
+
+        function animateTail() {
+            let px = mouseX;
+            let py = mouseY;
+            // Provide a small initial offset so they wait for mouse to move
+            for (let i = 0; i < tails.length; i++) {
+                const t = tails[i];
+                // Smooth follow factor
+                t.x += (px - t.x) * 0.35;
+                t.y += (py - t.y) * 0.35;
+                t.el.style.left = t.x + 'px';
+                t.el.style.top = t.y + 'px';
+                // the next segment follows this segment
+                px = t.x;
+                py = t.y;
+            }
+            requestAnimationFrame(animateTail);
+        }
+        animateTail();
+
+        document.querySelectorAll('a, button, .project-card, .stat-card, .edu-card, .vol-card, .skill-group').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.style.width = '20px'; cursor.style.height = '20px';
+                ring.style.width = '55px'; ring.style.height = '55px'; ring.style.opacity = '0.7';
+                tails.forEach(t => t.el.classList.add('hover'));
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.style.width = '10px'; cursor.style.height = '10px';
+                ring.style.width = '36px'; ring.style.height = '36px'; ring.style.opacity = '0.5';
+                tails.forEach(t => t.el.classList.remove('hover'));
+            });
+        });
+
+        // Scroll reveal
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="src/background.js"></script>
 </body>
 
 </html>
